@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hibernate.GamesHistory" table="games_history">
+		<id name="gameId" type="int" column="game_id"/>		
+		<property name="user1" type="string" column="user1"/>	
+		<property name="user2" type="string" column="user2"/>	
+		<property name="gameStatus" type="string" column="game_status"/>	
+		<property name="startDate" type="timestamp" column="start_date"/>	
+		<property name="endDate" type="timestamp" column="end_date"/>	
+		<property name="winner" type="string" column="winner"/>				
+	</class>		
+</hibernate-mapping>

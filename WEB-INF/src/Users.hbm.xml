@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hibernate.Users" table="users">
+		<id name="userName" type="string" column="user_name">
+			<generator class="assigned"/>
+		</id>
+		
+		<property name="userPassword" type="string" column="user_password"/>
+		<property name="name" type="string" column="name"/>		
+		<property name="gender" type="string" column="gender"/>
+		<property name="age" type="int" column="age"/>
+		
+		<property name="countryId"  type="int" column="country_id"/>
+		
+
+		<property name="userOnline" type="boolean" column="user_online"/>
+		<property name="userRole" type="string" column="user_role"/>
+		<property name="registrationDate" type="date" column="registration_date"/>
+		<property name="totalGames" type="int" column="total_games"/>
+		<property name="totalWins" type="int" column="total_wins"/>
+		<property name="totalDraws" type="int" column="total_draws"/>
+		<property name="totalPoints" type="int" column="total_points"/>
+		<property name="userImage" type="string" column="user_image"/>
+		<property name="userStatus" type="string" column="user_status"/>
+		<property name="userEmail" type="string" column="user_email"/>
+		<property name="userBusy" type="boolean" column="user_busy"/>
+	
+	</class> 
+		
+</hibernate-mapping>

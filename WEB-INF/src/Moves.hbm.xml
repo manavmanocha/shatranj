@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hibernate.Moves" table="moves">
+		<id name="moveId" type="int" column="move_id"/>		
+		<property name="gameId" type="int" column="game_id"/>	
+		<property name="pieceId" type="string" column="piece_id"/>	
+		<property name="startPosition" type="string" column="start_position"/>	
+		<property name="endPosition" type="string" column="end_position"/>	
+		<property name="moveTime" type="timestamp" column="movetime"/>
+					
+	</class>		
+</hibernate-mapping>

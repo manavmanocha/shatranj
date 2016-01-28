@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hibernate.Countries" table="countries">
+		<id name="countryId" type="int" column="country_id"/>		
+		<property name="countryName" type="string" column="country_name"/>
+		<property name="countryStatus" type="string" column="country_status"/>
+	</class>		
+</hibernate-mapping>

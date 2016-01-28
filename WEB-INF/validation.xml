@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN" "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+<formset>
+    <form name="LoginForm">
+   		<field property="userName"
+          	depends="required">
+        <arg0 key="LoginForm.userName"/>
+    	</field>
+    	<field  property="userPassword"
+         	depends="required">
+         	<arg0 key="LoginForm.userPassword"/>
+     	</field>     	
+	</form>
+	<form name="CreateAccountForm">
+   		<field property="name"
+          	depends="required">
+        <arg0 key="CreateAccountForm.name"/>
+    	</field>
+    	<field property="gender"
+          	depends="required">
+        <arg0 key="CreateAccountForm.gender"/>
+    	</field>
+    	<field property="age"
+          	depends="required">
+        <arg0 key="CreateAccountForm.age"/>
+    	</field>
+    	<field property="countryId"
+          	depends="required">
+        <arg0 key="CreateAccountForm.countryId"/>
+    	</field>
+    	<field property="emailId"
+          	depends="required">
+        <arg0 key="CreateAccountForm.emailId"/>
+    	</field>
+    	<field property="userName"
+          	depends="required">
+        <arg0 key="CreateAccountForm.userName"/>
+    	</field>
+    	<field property="userPassword"
+          	depends="required">
+        <arg0 key="CreateAccountForm.userPassword"/>
+    	</field>
+    	<field property="confirmUserPassword"
+          	depends="required">
+        <arg0 key="CreateAccountForm.confirmUserPassword"/>
+    	</field>
+    	
+    	
+    	     	   	
+	</form>
+</formset>
+</form-validation>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="LoginForm" type="users.LoginForm"/>
+		<form-bean name="CreateAccountForm" type="users.CreateAccountForm"/>
+	</form-beans>
+	<action-mappings>
+		<action path="/Login" type="users.LoginAction" name="LoginForm" scope="request" validate="true" input="/PlayChess.jsp">
+			<forward name="success" path="/GamePage.jsp"/>
+			<forward name="failure" path="/PlayChess.jsp"/>
+		</action>
+		<action path="/logout" type="users.LogoutAction">
+			<forward name="success" path="/Home.jsp"/>
+		</action>
+		<action path="/viewOnlineGame" type="Action.ViewOnlineGameAction">
+			<forward name="success" path="/OngoingView.jsp"/>
+		</action>
+		<action path="/getDataFromServer" type="users.DataFromServer"/>
+		<action path="/acceptInvitation" type="users.invitation.AcceptInvitationAction">
+			<forward name="success" path="/GameArea.jsp"/>
+		</action>
+		<action path="/rejectInvitation" type="users.invitation.RejectInvitationAction"/>
+		<action path="/getUserDetails" type="users.UserDetails"/>
+		<action path="/inviteUser" type="users.InviteAction"/>
+		<action path="/clearInvitationStatus" type="users.invitation.ClearInvitationStatus"/>
+		<action path="/playGame" type="users.invitation.PlayGameAction">
+			<forward name="success" path="/GameArea.jsp"/>
+		</action>
+		<action path="/sendMoves" type="game.MovesManager">
+			<forward name="success" path="/GamePage.jsp"/>
+		</action>
+		<action path="/getMovesJSON" type="game.MovesJSONManager"/>
+		<action path="/endGameAction" type="game.EndGameAction">
+			<forward name="success" path="/GamePage.jsp"/>
+		</action>
+		<action path="/quitGame" type="game.QuitGameAction">
+			<forward name="success" path="/GamePage.jsp"/>
+		</action>
+		<action path="/home" type="Action.HomePageAction">
+			<forward name="success" path="/HomePage.jsp"/>
+		</action>
+		<action path="/showUserProfile" type="Action.ShowUserProfileAction">
+			<forward name="success" path="/ProfilePage.jsp"/>
+		</action>
+		<action path="/showGamePlayback" type="Action.ShowGamePlaybackAction">
+			<forward name="success" path="/PlaybackPage.jsp"/>
+		</action>
+		<action path="/getNextMove" type="Action.GetNextMoveAction"/>
+		<action path="/CreateAccount" type="users.CreateAccountAction" name="CreateAccountForm" scope="request" validate="true" input="/CreateAccount.jsp">
+			<forward name="success" path="/HomePage.jsp"/>
+		</action>
+	</action-mappings>
+	<message-resources parameter="ApplicationResources" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,
+		/WEB-INF/validation.xml"/>
+	</plug-in>
+</struts-config>
